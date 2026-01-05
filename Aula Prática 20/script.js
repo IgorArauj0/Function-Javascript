@@ -1,7 +1,10 @@
 // Sessão 1 — mostrar / ocultar conteúdo simples
-function toggleConteudoSimples(botao) {
+function mostrarConteudoSimples(botao) {
 
-    // Busca o conteúdo da sessão
+    // A partir do botão clicado (botao),
+    // acessa o elemento pai da sessão e,
+    // dentro dele, localiza o elemento com a classe ".conteudo"
+    // Isso garante que cada botão controle apenas o conteúdo da sua própria sessão
     const conteudo = botao.parentElement.querySelector('.conteudo');
 
     // Alterna a visibilidade do conteúdo
@@ -15,9 +18,10 @@ function toggleConteudoSimples(botao) {
 
 
 // Sessão 2 — exibir mais / exibir menos
-function toggleConteudoAvancado(botao) {
+function mostrarConteudoAvancado(botao) {
 
-    // Busca o conteúdo extra da sessão
+    // A partir do botão clicado, busca o conteúdo extra
+    // apenas dentro da sessão correspondente
     const conteudoExtra = botao.parentElement.querySelector('.conteudo-extra');
 
     // Alterna a exibição do conteúdo extra
